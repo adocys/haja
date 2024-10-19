@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investor Listings – InfraValue</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #0d1117;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .tabs {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 20px;
+    }
+    .tabs a {
+      color: #9ba4b5;
+      text-decoration: none;
+      font-size: 16px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    .tabs a.active {
+      color: #ffffff;
+      border-color: #58a6ff;
+    }
+    .tabs a:hover {
+      border-color: #58a6ff;
+      color: #ffffff;
+    }
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .project-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        height: 300px;
+        width: calc(33.333% - 20px); /* Three cards per row */
+        transition: transform 0.2s;
+        transition: transform 0.2s;
+    }
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+    .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .project-info {
+        padding: 15px;
+    }
+    .project-title {
+        font-size: 1.2em;
+        margin: 0;
+        color: #333;
+    }
+    .project-location {
+            color: #777;
+            font-size: 0.9em;
+        }
+    .project-description {
+        color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Investor Listings</h1>
+<div class="tabs">
+  <a href="./main.html" id="plannersTab">Planners</a>
+  <a href="./investor.html" class="active" id="investorsTab">Investors</a>
+</div>
+
+<div class="projects">
+  <div class="project-card">
+      <img src="asset/highway.png" alt="Highway Project" class="project-image">
+      <div class="project-info">
+          <h3 class="project-title">Highway Expansion</h3>
+          <p class="project-location">Georgia, Atlanta</p>
+          <p class="project-description">A project to expand the existing highway to improve traffic flow.</p>
+      </div>
+  </div>
+  <div class="project-card">
+      <img src="asset/subway.png" alt="Subway Project" class="project-image">
+      <div class="project-info">
+          <h3 class="project-title">New Subway Line</h3>
+          <p class="project-location">Georgia, Atlanta</p>
+          <p class="project-description">Construction of a new subway line from Midtown to Buckhead.</p>
+      </div>
+  </div>
+  <div class="project-card">
+      <img src="asset/bridge.png" alt="Bridge Project" class="project-image">
+      <div class="project-info">
+          <h3 class="project-title">Bridge Renovation</h3>
+          <p class="project-location">Georgia, Atlanta</p>
+          <p class="project-description">Renovation of the old bridge to ensure safety and longevity.</p>
+      </div>
+  </div>
+</div>
+
+
+</body>
+</html>

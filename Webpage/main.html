@@ -79,7 +79,6 @@
     .example-link:hover {
       color: #1f6feb;
     }
-    /* Tabs Section */
     .tabs {
       position: absolute;
       top: 20px;
@@ -102,9 +101,10 @@
       border-color: #58a6ff;
       color: #ffffff;
     }
-    /* File Drop Section */
     .file-drop {
-      padding: 20px;
+      padding: 10px;
+      margin-top: 25px;
+      margin-bottom: 30px;
       border: 2px dashed #30363d;
       border-radius: 8px;
       background-color: #161b22;
@@ -121,17 +121,15 @@
 </head>
 <body>
 
-<!-- Tabs Section -->
 <div class="tabs">
-  <a href="main.html" class="active" id="plannersTab">Planners</a>
-  <a href="investor.html" id="investorsTab">Investors</a>
+  <a href="./main.html" class="active" id="plannersTab">Planners</a>
+  <a href="./investor.html" id="investorsTab">Investors</a>
 </div>
 
 <div class="container">
   <h1>InfraValue</h1>
   <p>Discover the impact of infrastructure projects before they happen.</p>
 
-  <!-- State Dropdown -->
   <select id="stateDropdown" aria-label="Select State or Region">
     <option value="" disabled selected>Select State/Region</option>
     <option value="new_york">New York</option>
@@ -140,7 +138,6 @@
     <option value="georgia">Georgia</option>
   </select>
 
-  <!-- Infrastructure Dropdown -->
   <select id="infrastructureDropdown" aria-label="Select Infrastructure Type">
     <option value="" disabled selected>Select Infrastructure Type</option>
     <option value="subway">Subway</option>
@@ -149,13 +146,11 @@
     <option value="commercial">Commercial Development</option>
   </select>
 
-  <!-- File Drop Input -->
   <label class="file-drop" for="fileInput">
     Drop your data here or click to upload
     <input type="file" id="fileInput" accept=".csv,.xlsx,.xls,.json">
   </label>
 
-  <!-- Get Feasibility Report Button -->
   <button class="button" onclick="getFeasibilityReport()">Get Feasibility Report</button>
 
   <a href="#" class="example-link" onclick="preFillExample('New York', 'Subway')">
@@ -163,43 +158,11 @@
   </a>
 </div>
 
+<script src="main.js"></script>
+
 <script>
-  // Example pre-fill function
-  function preFillExample(state, infrastructure) {
-    document.getElementById('stateDropdown').value = state.toLowerCase().replace(' ', '_');
-    document.getElementById('infrastructureDropdown').value = infrastructure.toLowerCase().replace(' ', '_');
-  }
-
-  // Redirect to dashboard with state and infrastructure data
-  function getFeasibilityReport() {
-    const state = document.getElementById('stateDropdown').value;
-    const infrastructure = document.getElementById('infrastructureDropdown').value;
-    const fileInput = document.getElementById('fileInput');
-
-    if (!state || !infrastructure) {
-      alert('Please select both state and infrastructure type.');
-      return;
-    }
-
-    if (fileInput.files.length === 0) {
-      alert('Please upload a file to proceed.');
-      return;
-    }
-
-    alert('Feasibility report generated!'); // Replace this with real logic.
-  }
-
-  // Highlight the active tab dynamically
-  document.addEventListener('DOMContentLoaded', () => {
-    const currentPage = window.location.pathname.split('/').pop();
-    const plannersTab = document.getElementById('plannersTab');
-    const investorsTab = document.getElementById('investorsTab');
-
-    if (currentPage === 'main.html') {
-      plannersTab.classList.add('active');
-    } else if (currentPage === 'investor.html') {
-      investorsTab.classList.add('active');
-    }
+  document.getElementById('investorsTab').addEventListener('click', () => {
+    window.location.href = 'investor.html';
   });
 </script>
 
