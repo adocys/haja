@@ -1,0 +1,16 @@
+Region,Population_Density,Car_Ownership_Rate,Daily_Cyclists,Traffic_Congestion_Level,Accidents_involving_Cyclists,Avg_Property_Value,Air_Quality_Index,Public_Health_Index,Existing_Bike_Lanes,Planned_Development_Projects
+Midtown,9794,0.8,1404,8,15,1.37,77,76,16,4
+Buckhead,11853,0.42,2741,7,5,2.03,80,81,20,3
+Downtown,6879,0.42,1151,5,8,2.18,63,83,20,1
+West End,9098,0.5,1900,8,15,0.88,79,87,8,1
+Old Fourth Ward,14797,0.42,2586,9,12,1.38,78,72,7,5
+Inman Park,9718,0.63,557,4,8,1.75,54,85,2,1
+Virginia-Highland,8841,0.56,553,4,7,2.34,76,75,1,1
+Grant Park,5832,0.42,2815,8,3,1.73,78,73,12,5
+East Atlanta,7223,0.6,2209,9,13,2.25,77,78,5,2
+Castleberry Hill,13105,0.54,852,9,10,2.29,65,76,5,1
+Cabbagetown,9218,0.51,1190,4,14,0.88,74,82,12,2
+Lindbergh,11742,0.53,525,6,15,1.04,75,86,7,1
+Piedmont Heights,12894,0.65,2672,10,13,0.88,76,73,4,5
+Atlantic Station,14050,0.54,2396,5,4,2.1,79,73,6,3
+West Midtown,5949,0.46,2325,9,6,2.47,66,77,15,2
